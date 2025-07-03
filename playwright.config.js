@@ -1,7 +1,7 @@
 const { defineConfig, devices } = require('@playwright/test');    // @ts-check
 
 module.exports = defineConfig({             // https://playwright.dev/docs/test-configuration
-  testDir: './tests',
+  testDir: './tests',                       // ./e2e    ./tests
   timeout: 30000,                           // Timeout for each test, includes test, hooks and fixtures 30 Sec  Overide: test.setTimeout(120000)  https://playwright.dev/docs/test-timeouts
   expect: { timeout: 10000 },               // Timeout for each assertion         Overide: expect(locator).toBeVisible({ timeout: 10000 })
   fullyParallel: true,                      // Run all tests cases in every file in parallel
